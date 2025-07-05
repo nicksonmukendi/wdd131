@@ -1,0 +1,57 @@
+/* this is style of this code */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    display: block;
+}
+span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 0.5rem;
+    background-color: rgb(34, 130, 209);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    color: yellow;
+}
+nav { 
+    justify-content: center;
+    background-color: rgb(5, 8, 10);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 1rem;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    background-color:  rgb(7, 7, 8);
+    text-align: center;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    color: rgb(105, 103, 103);
+}
+
+
+
+footer {
+    background-color: black;
+    padding:50px;
+    margin: 0.1rem;
+    color: white;
+    text-align: center;
+
+}
