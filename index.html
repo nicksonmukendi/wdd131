@@ -4,48 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wdd131-Dynamic Web Fundamentals| Nickson Mbuyi Mukendi</title>
-    <meta name="description" content="wdd131-Dynamic Web Fundamentals| Nickson Mbuyi Mukendi, this is the page for wdd11-Dynamic Web Fundamentals">
+    <meta name="description" content="wdd131-Dynamic Web Fundamentals| Nickson Mbuyi Mukendi.Learn web development fundamentals including HTML, CSS, and JavaScript.">
     <meta name="author" content="Nickson Mbuyi MUKENDI">
 <!-- this is for this html code -->
 
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <span> WDD 131 - dynamic web Fundamentals</span>
+        <span id="course-title"> WDD 131 - dynamic web Fundamentals</span>
         <nav>
-            <a href="https://www.linkedin.com/in/nickson-mbuyi-392486117/">Linkedin</a>
-            <a href="https://byupw.instructure.com/.">Canvas</a>
-            <a href=" https://www.churchofjesuschrist.org/study/scriptures">Scriptures</a>
+            <a href="https://www.linkedin.com/in/nickson-mbuyi-392486117 "target="blank">Linkedin</a>
+            <a href="https://byupw.instructure.com/." target="_blank">Canvas</a>
+            <a href=" https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scriptures</a>
             <a href="/final_projects/">Final Projects</a>
         </nav>
 
     </header>
     <main>
         <h1> Nickson Mbuyi Mukendi</h1>
-            <section class="card-containers">
-                <img src="iamges/imgprofil.webp" height="400" alt="my photo">
-                <p> My name is Nickson Mbuyi Mukendi, I was born in the DR Congo/Kinshasa, First son of five children, I live at Kinshasa with my family, place of born : kasai state calls (province in french language), father of three loved children, I'm maried to Magloire Lita, and we are separate in our country as clans, my clan is calls: BALUBA so I'm a MULUBA because singular of BALUBA is MULUBA, and my wife her clan is BANGALA, she is  MUNGALA, I work in a private business like Business man, my entity work in general contruction, we engage many construction professionnal workers, I study code and programming, create website and others,  </p>
-
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <img src="/images/imgprofil.webp" alt="my photo"width="260" height="350">
+                    <p> My name is Nickson Mbuyi Mukendi, I was born in the DR Congo/Kinshasa, First son of five children, I live at Kinshasa with my family, place of born : kasai state calls (province in french language), father of three loved children, I'm maried to Magloire Lita, and we are separate in our country as clans, my clan is calls: BALUBA so I'm a MULUBA because singular of BALUBA is MULUBA, and my wife her clan is BANGALA, she is  MUNGALA, I work in a private business like Business man, my entity work in general contruction, we engage many construction professionnal workers, I study code and programming, create website and others,  </p>
+                </div>
             </section>
 
-            <section class="card-country">
-                <img src="iamges/drc flag.webp" height="200" alt="this is the DR Congo flag , my country ">
-                <h2>DR Congo/Kinshasa</h2>
+            <section class="card">
+                <h2>DR.Congo-Flag</h2>
+                <div class="card-content">
+                    <img src="/images/drc flag.webp" alt="this is the DR Congo flag , my country " width="200" height="200">
                 <p>the Congo/Kinshasa is located in africa and have 9 others country as a neighbors : Congo-brazzaville,
         Republic central africa, South-sudan, Burundi, Uganda, Angola, Zambia, Rwanda, and Burundi</p>
-
+                </div>
+                <div class="Web Dev Ressources-content">
+                    <h2> Web Dev Ressources</h2>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                        <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+                        <li><a href="https://www.udemy.com/courses/search/?q=web%20development" target="_blank">Udemy Web Development Courses</a></li>
+                </div>
             </section>
 
     </main>
     <footer>
-        <p>© 2025   Nickson Mbuyi MUKENDI</p>
-        <span></span>
-        <p> </p>
-        
+        <p>&copy;<span>id="currentyear"</span>Nickson Mbuyi MUKENDI</p>
+        <p>Last updated: <span id="lastupdated"></span></p>
+
     </footer>
     
 </body>
