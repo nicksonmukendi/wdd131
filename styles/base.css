@@ -7,6 +7,11 @@
     --background-color: #f9f9f9;
     --card-background: #fff;
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -21,12 +26,12 @@ header {
     background-color: var(--primary-color);
     color: yellow;
     padding: 0.5rem;
-    text-align: center;
+    text-align: left;
 }
 
 
 #course-title {
-    display: block;
+    display: flex;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -55,7 +60,6 @@ nav a:hover {
 
 main {
     position: relative;
-    display: flex;
     flex-direction: column;
     max-width: 1200px;
     margin: 2rem auto;
@@ -69,9 +73,10 @@ h1 {
     margin-bottom: 2rem;
     margin-top: 0;
 }
-.cards-container {
-    display: flex;
-    gap: 2rem;
+.card-container {
+    display: grid;
+    flex-direction: row;
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
@@ -83,7 +88,6 @@ h1 {
     margin-bottom: 3rem;
     text-align: justify;
     max-width: 100%;
-    box-sizing: border-box;
     overflow: hidden;
     margin-top: 1px;
 }
@@ -102,7 +106,6 @@ h1 {
     gap: 1.5rem; 
     align-items: center;
     width: 100%;
-    box-sizing: border-box;
     flex-wrap: wrap;
 }
 
@@ -114,7 +117,6 @@ h1 {
     float: none;
     transform: none;
     margin-left: 1rem;
-    box-sizing: border-box;
 }
 
 .card ul {
