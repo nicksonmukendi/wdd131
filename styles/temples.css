@@ -1,0 +1,36 @@
+:root {
+    --primary-color: #0c143a;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #9aa3b4;
+    --card-background: #fff;
+}
+* {
+padding: 0;
+margin: 0;
+}
+
+Body {
+    background-color: var(--background-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: weight;
+}
+header,main,footer {
+    width: 1240px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: rgb(131, 131, 187);
+}
+
+span {
+    text-size-adjust: 100%;
+}
+main {
+    gap : 1rem;
+}
+figure {
+    display: flex;
+    flex-direction: center;
+}
