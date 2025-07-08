@@ -1,36 +1,122 @@
 :root {
-    --primary-color: #0c143a;
+    --primary-color: #50482c;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
     --text-color: #333;
-    --background-color: #9aa3b4;
-    --card-background: #fff;
+    --background-color: #f9f9f9;
+    --nav-bg-color: #2c502f;
+    --nav-text-color: #ecf0f1;
 }
+
 * {
-padding: 0;
-margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-Body {
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
     background-color: var(--background-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: weight;
-}
-header,main,footer {
-    width: 1240px;
-    margin: 1rem auto;
-    border: 1px solid #bbb;
-    padding: 1rem;
-    background-color: rgb(131, 131, 187);
 }
 
-span {
-    text-size-adjust: 100%;
+header {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 1rem;
+    text-align: center;
 }
+
+header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    color: var(--nav-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+}
+
 main {
-    gap : 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
+
+main h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1.5rem;
+}
+
 figure {
-    display: flex;
-    flex-direction: center;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Show navigation when active */
+nav.active {
+    display: block;
 }
