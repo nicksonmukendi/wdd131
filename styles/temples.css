@@ -4,7 +4,7 @@
     --accent-color: #e74c3c;
     --text-color: #333;
     --background-color: #f9f9f9;
-    --nav-bg-color: #2c502f;
+    --nav-bg-color: #15112c;
     --nav-text-color: #ecf0f1;
 }
 
@@ -57,6 +57,7 @@ nav ul li a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
+    font-size: 25px
 }
 
 nav ul li a:hover {
@@ -64,7 +65,7 @@ nav ul li a:hover {
 }
 
 main {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -77,8 +78,9 @@ main h1 {
 
 .temple-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns:  repeat(3, 1fr); 
     gap: 1.5rem;
+    justify-content: center;
 }
 
 figure {
@@ -96,7 +98,7 @@ figure:hover {
 img {
     width: 100%;
     height: auto;
-    display: grid;
+    display: block;
     max-height: 300px;
     object-fit: cover;
 }
