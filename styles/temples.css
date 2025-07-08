@@ -31,6 +31,7 @@ header {
 header h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 0.5rem;
+    font-size: 60px;
 }
 
 #hamburger {
@@ -95,7 +96,7 @@ figure:hover {
 img {
     width: 100%;
     height: auto;
-    display: block;
+    display: grid;
     max-height: 300px;
     object-fit: cover;
 }
