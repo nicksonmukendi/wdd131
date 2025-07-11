@@ -15,6 +15,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+    max-width: 2560px;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
@@ -28,10 +33,11 @@ header {
     text-align: center;
 }
 
-header h1 {
+header span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 0.5rem;
     font-size: 60px;
+    text-align: center;
 }
 
 #hamburger {
@@ -66,28 +72,35 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px;
-    margin: 1rem;
+    width: 100%;
+    margin: 1rem auto;
     padding: 0 1rem;
+    flex: 1;
 }
 
-main h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
+h1 {
+    text-align: left;
+    margin-bottom: 1rem;
     color: var(--primary-color);
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .temple-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-    grid-template-rows: repeat(3, 220px); /* Creates 3 rows with automatic height */
-    gap: 5px; /* Adds space between grid items */
-    max-width: 1200px; /* Optional: limits the maximum width of the grid */
-    margin: auto; /* Centers the grid */
+    justify-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    max-width: 1600px; /* Optional: limits the maximum width of the grid */;
 }
 
 .temple-grid figure {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 figure:hover {
@@ -95,17 +108,23 @@ figure:hover {
 }
 
 .temple-grid img {
+    display: block;
     width: 100%; /* Makes images fill their container */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 400px;
+    height: 350px; /* Maintains aspect ratio */
+    object-fit: cover;
     border-radius: 8px; /* Optional: adds rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    display: block;
 }
 
 .temple-grid figcaption {
     text-align: center;
     margin-top: 10px;
     font-family: "Roboto", sans-serif;
+    box-shadow: #50482c;
+}
+header, footer {
+    text-align: center;
 }
 
 footer {
@@ -114,6 +133,8 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    font-size: 1rem;
+    width: 100%;
 }
 
 /* Show navigation when active */

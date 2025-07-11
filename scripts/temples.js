@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
             nav.classList.toggle('active');
-            hamburger.textContent = nav.classList.contains('active') ? '✕' : '☰';
+            hamburger.textContent = nav.classList.contains('active') ? '❌' : '☰';
         });
     }
 
