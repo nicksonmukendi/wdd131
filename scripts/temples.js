@@ -1,15 +1,24 @@
-// Hamburger menu functionality
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
 
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    hamburger.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    // Only run if elements exist
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            hamburger.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+    }
+
+    // Footer dynamic content
+    const currentYearElement = document.getElementById('currentyear');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+
+    const lastUpdatedElement = document.getElementById('lastupdated');
+    if (lastUpdatedElement) {
+        lastUpdatedElement.textContent = document.lastModified;
+    }
 });
-
-// Footer dynamic content
-const currentYear = new Date().getFullYear();
-document.getElementById('currentyear').textContent = currentYear;
-
-const lastModified = document.lastModified;
-document.getElementById('lastupdated').textContent += lastModified;

@@ -57,7 +57,7 @@ nav ul li a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
-    font-size: 25px
+    font-size: 25px;
 }
 
 nav ul li a:hover {
@@ -66,7 +66,7 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 1rem;
     padding: 0 1rem;
 }
 
@@ -78,37 +78,34 @@ main h1 {
 
 .temple-grid {
     display: grid;
-    grid-template-columns:  repeat(3, 1fr); 
-    gap: 1.5rem;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-template-rows: repeat(3, 220px); /* Creates 3 rows with automatic height */
+    gap: 5px; /* Adds space between grid items */
+    max-width: 1200px; /* Optional: limits the maximum width of the grid */
+    margin: auto; /* Centers the grid */
 }
 
-figure {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+.temple-grid figure {
+    display: grid;
+    align-items: center;
 }
 
 figure:hover {
     transform: translateY(-5px);
 }
 
-img {
-    width: 100%;
-    height: auto;
+.temple-grid img {
+    width: 100%; /* Makes images fill their container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     display: block;
-    max-height: 300px;
-    object-fit: cover;
 }
 
-figcaption {
-    padding: 0.8rem;
+.temple-grid figcaption {
     text-align: center;
-    font-weight: bold;
-    background-color: var(--primary-color);
-    color: white;
+    margin-top: 10px;
+    font-family: "Roboto", sans-serif;
 }
 
 footer {
