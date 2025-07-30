@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples of The Church of Jesus Christ of Latter-day Saints</title>
+    <meta name="description" content="Information about temples of The Church of Jesus Christ of Latter-day Saints">
+    <link rel="stylesheet" href="filtered.css">
+    <script src="filtered.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="hamburgerBtn">&#9776;</button>
+            <ul id="primaryNav">
+                <li><a href="#" class="active" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/temple-hero-small.jpg">
+                <source media="(max-width: 1000px)" srcset="images/temple-hero-medium.jpg">
+                <img src="https://churchofjesuschristtemples.org/aba-nigeria-temple/" alt="Temple" loading="lazy">
+            </picture>
+            <img src="aba-nigeria-temple-5087-main.jpg" alt="temple">
+        </div>
+        
+        <div class="temple-cards" id="templeContainer"></div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Nickson Mbuyi MUKENDI</p>
+        <p>Last updated: <span id="lastupdated"></span></p>
+    </footer>
+    
+    <script src="js/filtered-temples.js"></script>
+</body>
+</html>
