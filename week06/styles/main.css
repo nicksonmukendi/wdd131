@@ -1,10 +1,10 @@
 /* styles/main.css */
 :root {
-    --primary-color: #2c3e50; /* Deep blue for professionalism */
+    --primary-color: #016cf8; /* Deep blue for professionalism */
     --secondary-color: #e74c3c; /* Red for calls to action */
     --accent-color: #f39c12; /* Orange for highlights */
     --light-color: #ecf0f1; /* Light gray for backgrounds */
-    --dark-color: #2c3e50; /* Dark text */
+    --dark-color: hsl(210, 17%, 72%);
     --success-color: #27ae60; /* Green for success messages */
 }
 
@@ -18,10 +18,9 @@ header image {
 }
 
 body {
-    background-image: url('../images/backgroundimages.webp');
+    background-image: url('../images/fond-abstrait-sombre-vagues-abstraites-rougeoyantes_7247-326.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
     font-family: 'Roboto Serif', serif;
     line-height: 1.6;
     color: var(--dark-color);
@@ -36,6 +35,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+li a {
+    color: #ecf0f1;
+    font-size: x-large;
+}
+footer {
+    background-color: #ecf0f1;
+    padding: 0.2rem;
+    margin: 0 auto;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 /* Responsive design */
