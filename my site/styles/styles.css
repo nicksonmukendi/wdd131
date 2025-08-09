@@ -29,6 +29,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
     line-height: 1.2;
 }
+
 h1 {
     margin: 20px 0;
     font-size: 2.5rem;
@@ -48,17 +49,16 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
-    display: flex;
-    float: left;
-    padding: 10px;
+}
+
+.logo img {
+    display: block;
+    padding: 1px;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     object-fit: cover;
     transition: var(--transition);
     border: 2px solid var(--white);
-    margin-right: 20x;
-
-
 }
 
 ul {
@@ -82,6 +82,7 @@ ul {
     transition: var(--transition);
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn:hover {
@@ -101,23 +102,29 @@ header {
     padding: 15px 0;
 }
 
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo h1 {
     color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    font-size: 2rem;
+    margin-top: 10px;
 }
 
 .logo p {
     color: var(--dark-gray);
     font-size: 0.9rem;
+    margin-bottom: 10px;
 }
-
-
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-links {
@@ -156,11 +163,13 @@ nav {
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
+    padding: 10px;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -250,12 +259,12 @@ nav {
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 20px 0;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .property-slider::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
 .property-card {
@@ -686,5 +695,9 @@ footer {
 
     .footer-section {
         min-width: 100%;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
     }
 }
