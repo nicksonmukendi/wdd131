@@ -17,7 +17,7 @@
 body {
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
+    min-height: 100vh; /* Changed from min-width to min-height */
     max-width: 2560px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
@@ -86,14 +86,21 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Updated grid styling */
 .temple-grid {
     display: grid;
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
-    max-width: 1600px; /* Optional: limits the maximum width of the grid */;
+    max-width: 1200px;
+}
+
+.temple {
+    display: contents; /* This makes the divs participate in the grid */
 }
 
 .temple-grid figure {
@@ -101,6 +108,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 100%;
 }
 
 figure:hover {
@@ -108,21 +116,21 @@ figure:hover {
 }
 
 .temple-grid img {
-    display: block;
-    width: 100%; /* Makes images fill their container */
-    max-width: 400px;
-    height: 350px; /* Maintains aspect ratio */
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 8px; /* Optional: adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .temple-grid figcaption {
     text-align: center;
     margin-top: 10px;
     font-family: "Roboto", sans-serif;
-    box-shadow: #50482c;
+    font-size: 1.1rem;
 }
+
 header, footer {
     text-align: center;
 }
@@ -140,4 +148,23 @@ footer {
 /* Show navigation when active */
 nav.active {
     display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        grid-template-rows: repeat(5, auto); /* Adjust rows accordingly */
+    }
+}
+
+@media (max-width: 600px) {
+    .temple-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+        grid-template-rows: repeat(9, auto); /* All items in one column */
+    }
+    
+    header span {
+        font-size: 40px;
+    }
 }
